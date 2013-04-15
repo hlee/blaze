@@ -8,59 +8,70 @@
 				li
 					a href="#home" class="nav_home current" Home
 				li
-					a href="#what" class="nav_what " What is Fusteeno
+					a href="#skills" class="nav_what " Skills
 				li
-					a href="#register" class="nav_register" Contact
+					a href="#members" class="nav_register" Members
+				li
+					a href="#contact" class="nav_register" Contact
+				li
+					a href="/" class="nav_register" Blog
 .clear
 .double-line
 
 <!-- BEGIN: home page -->
-#home.scrol-page
-	.bg-img.bg-img-1
-		.stamp
-		   img src="/img/stamp.png" width="240" height="171"
-		#slider.sl-slider-wrapper
-			 .sl-slider
-					.sl-slides-wrapper
-							.sl-slide.sl-slide-horizontal
-						 			.sl-content-wrapper  style="width: 1234px; height: 580px;"
-						 					.sl-content
-						 							.sl-slide-inner
-						 								h2 Easy Transfer online <span class="label label-warning">BETA version</span>	
-						 								blockquote 
-						 										p Send documents, images and large files online <br>using your favorite cloud service.
-						 										p Available  with <img src="/img/drive-128.png" width="64" height="64" align="middle"> and <img src="/img/Dropbox-128.png" alt="Dropbox" width="64" height="64" align="middle">
-						 										p &nbsp;
-						 										p <a href="http://www.fusteeno.com/google-oauth2" class="btn btn-primary btn-large twitter_button" id="twitter_button"><i></i>LOG in with Google</a><a href="http://www.fusteeno.com/facebook-oauth2" class="btn btn-primary btn-large twitter_button" id="twitter_button"><i></i>LOG in with Facebook</a>
-.clear
-<!-- BEGIN: what is page -->
-.scrol-page.black#what
+.scrol-page.black#home
 		section#title
 			.page_caption
-				h1 What is Fusteeno!
-				h2 Problem with email attachment? Send files of any size in just few seconds!
+				h1  WHAT WE DODN
 		.container#slogan-container
 			#slogan
-				p.teaserLight WE PROVIDE AN EASY TOOL TO DELIVER YOUR DOCS ON THE WEB	
+				p.teaserHeavy JUST THINK ABOUT "WHO" TO SEND,<br>FUSTEENO TAKE CARE "WHERE"
+			.marketing
+			  -2.times do 
+				.row-fluid
+				 -3.times do 
+					.span4
+						.projects
+							  img src="/img/projects/cms6bey.png"
+						 	  p.title  <a href='http://bey6.herokuapp.com/'>CMS6Bey</a> <p class='description'>  这是一个根据在线分享的淘宝客.</p>
+							
+.clear
+<!-- BEGIN: what is page -->
+.scrol-page.black#skills
+		section#title
+			.page_caption
+				h1 WHAT WE USE
+		.container#slogan-container
+			#slogan
 				p.teaserHeavy JUST THINK ABOUT "WHO" TO SEND,<br>FUSTEENO TAKE CARE "WHERE"	
 			.marketing
 				.row-fluid
-					.span4
-						h3 Your hard disk is online!
-						p Send it to your contact on Facebook, Google or by @mail<br>
-							  <img src="/img/facebook_64.png"><img src="/img/Google-Plus-64.png">
-					.span4
-						h3 Your hard disk is online!	
-						p se your favourite cloud system to choose what files to send<br>
-							  <img src="/img/Dropbox-64.png" width="64" height="64"><img src="/img/Google-Drive.png" width="64" height="64">			
-					.span4
-						h3 You will no longer need to use e-mail!
-						p Wherever your are, without email system!<br>
-								<img src="/img/Gnome-Web-Browser-64.png">	
-	
+					.span12
+							  <img src="/img/skills/rails.png">
+.clear
+<!-- BEGIN: what is page -->
+.scrol-page.black#members
+		section#title
+			.page_caption
+				h1 WHO WE ARE
+		.container#slogan-container
+			#slogan
+				p.teaserHeavy JUST THINK ABOUT "WHO" TO SEND,<br>FUSTEENO TAKE CARE "WHERE"	
+			.marketing
+			.members
+			  -2.times do 
+				.row-fluid
+				  -2.times do 
+						.span6.person
+							  img src="/img/person/miss.jpg"
+							  .details
+							  	p <span >name:</span>  songjiayang
+							  	p <span >email:</span>  songjiayng@gmail.com
+							  	p <span >location:</span>  china
+							  	p <span >power:</span>  ruby,python...
 
 .clear	
-#register.scrol-page
+#contact.scrol-page
 	a href="mailto:info"
 		section#title 
 	section#title
@@ -70,10 +81,7 @@
 					 img src="/img/tell.png" width="274" height="197"
 			h2
 				a href="mailto:info@fusteeno.com" Comments and suggestions? contact us!<br>
-				a href="mailto:info@fusteeno.com" Advertise with us? contact us!
-				p asdfas
-		a href="mailto:info" 
-	a href="mailto:info" 
+				a href="mailto:info@fusteeno.com" Advertise with us? contact us! 
 .clear
 
 	.copyright
