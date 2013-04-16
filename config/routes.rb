@@ -1,6 +1,9 @@
 Blaze::Application.routes.draw do
 
 
+  get "admin" =>"admin#index"
+  get "/pro/(:id)" =>"home#project"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

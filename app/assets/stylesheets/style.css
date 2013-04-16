@@ -8,6 +8,7 @@ body{
 	background-position: left top;
 	background:#fff;
 	font-family:Arial, Helvetica, sans-serif;
+	background-color: #fff;
 }
 
 a{
@@ -21,6 +22,7 @@ a{
 
 a:hover{
 	color:#5bb4e5;
+	cursor: pointer;
 }
 h1, h2, h3, h4, h5, h6
 {
@@ -252,18 +254,6 @@ ul{list-style:none;}
 #header {
 }
 
-/* ------- Menu ------- */
-.top-menu {
-	height:58px;
-	text-align: center;
-	background-image: url(../img/topmenu-bg.png);
-	background-repeat: no-repeat;
-	background-position: center -11px;
-	margin-top: 23px;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-left: auto;
-}
 ul.menu {
     display: table;
     margin: 0 auto;
@@ -680,6 +670,36 @@ ul.menu .current a {
 	left: 0;
 	background-color: none;
 } 
+
+.projects{
+	border: 6px solid #fff;
+	background-color:#eee; 
+	padding-top: 10px;
+	margin-top: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.projects:hover{
+	cursor: pointer;
+}
+
+.projects img {
+	width: 290px;
+	height: auto;
+	overflow: hidden;
+}
+
+.projects .description{
+	font-size: 12px;
+}
+
+.projects .title{
+	padding-top: 10px;
+}
+
+
+
 
 .sl-slide {
 	z-index: 1;
@@ -1414,7 +1434,7 @@ img.right_float { margin: 3px 0px 30px 30px; }
 /* ------- Contact Form ------- */
 #contact {
 	padding-bottom:50px;
-	background-color: #eeeeee;
+	background-color: #fff;
 }
 
 #contact_form {
@@ -1947,4 +1967,68 @@ a:hover img {
 	right: 0px;
 	font-size: 80%;
 	top: 10px;
+}
+.members{
+	padding-bottom: 100px;
+}
+.person{
+	height: 180px;
+	border: 1px solid #DDD;
+	padding-top: 10px;
+	margin-top: 20px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.person img{
+	width: 140px;
+	height: 140px;
+	margin-left: 10px;
+	padding-top: 10px;
+	border-radius: 5px;
+	float: left;
+}
+
+.details{
+	float: left;
+	margin-left: 20px;
+	font-size: 12px;
+	margin-top:15px;
+	text-align: left;
+}
+
+.details p {
+	width: 235px;
+}
+.details span:hover {
+	cursor: pointer;
+}
+
+.details span{
+		color: #bbb;
+		padding-right: 10px;
+		width: 20px;
+}
+
+p .icon-user{
+	padding-left: 4px;
+}
+
+p .icon-map-marker{
+	padding-left: 5px;
+}
+
+
+.center{
+	margin-left: 13%;
+}
+
+.logout{
+	color: #777;
+	font-size: 14px;
+	padding-top:5px; 
+}
+
+.logout:hover{
+	cursor: pointer;
+	color: #08c;
 }
