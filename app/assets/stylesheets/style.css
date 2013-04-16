@@ -686,7 +686,7 @@ ul.menu .current a {
 
 .projects img {
 	width: 290px;
-	height: auto;
+	height: 153px;
 	overflow: hidden;
 }
 
@@ -1977,6 +1977,7 @@ a:hover img {
 	padding-top: 10px;
 	margin-top: 20px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	width: 40%;
 }
 
 .person img{
@@ -2019,7 +2020,7 @@ p .icon-map-marker{
 
 
 .center{
-	margin-left: 13%;
+	margin-left: 10%;
 }
 
 .logout{
@@ -2031,4 +2032,9 @@ p .icon-map-marker{
 .logout:hover{
 	cursor: pointer;
 	color: #08c;
+}
+
+
+.skills-img{
+	margin-left: 14%;
 }

@@ -27,13 +27,13 @@
 			#slogan
 				p.teaserHeavy JUST THINK ABOUT "WHO" TO SEND,<br>FUSTEENO TAKE CARE "WHERE"
 			.marketing.center
-			  -2.times do 
-				.row
-				 -3.times do 
+				- for project in @projects do 
 					.span3
 						.projects
-							  img src="/img/projects/cms6bey.png" id="1"
-						 	  p.title  <a href='http://bey6.herokuapp.com/'>CMS6Bey</a> <p class='description'>  这是一个根据在线分享的淘宝客.</p>
+							  img src=project.attachments.first.img_path id=project.id
+						 	  p.title  
+						 	  	a href="/pro/#{project.id}" =project.title 
+						 	  p class='description'  =project.description
 							
 .clear
 <!-- BEGIN: what is page -->
@@ -45,7 +45,7 @@
 			#slogan
 				p.teaserHeavy JUST THINK ABOUT "WHO" TO SEND,<br>FUSTEENO TAKE CARE "WHERE"	
 			.marketing
-				.row-fluid.center
+				.row-fluid.skills-img
 					.span9
 							  <img src="/img/skills/rails.png">
 .clear
@@ -59,16 +59,22 @@
 				p.teaserHeavy JUST THINK ABOUT "WHO" TO SEND,<br>FUSTEENO TAKE CARE "WHERE"	
 			.marketing
 			.members.center
-			  -2.times do 
-				.row-fluid
-				  -2.times do 
-						.span5.person
-							  img src="/img/person/miss.jpg"
-							  .details
-							  	p <span class='icon-user user' ></span>  songjiayang
-							  	p <span class='icon-envelope'></span>  songjiayng@gmail.com
-							  	p <span class='icon-map-marker'></span>  china
-							  	p <span class=' icon-eye-open'></span>  ruby,python...
+				-@persons.each_with_index do |person,index| 
+					.span5.person
+							img src="/img/person/miss.jpg"
+							.details
+								p 
+									span.icon-user.user
+									=person.name
+								p 
+									span.icon-envelope
+									=person.email
+								p 
+								  span.icon-map-marker
+								  =person.location
+								p 
+									span.icon-eye-open
+									=person.power
 
 .clear	
 #contact.scrol-page
