@@ -1992,12 +1992,43 @@ a:hover img {
 	float: left;
 	margin-left: 20px;
 	font-size: 12px;
-	margin-top:10px;
+	margin-top:15px;
+	text-align: left;
 }
+
 .details p {
 	width: 235px;
 }
+.details span:hover {
+	cursor: pointer;
+}
 
 .details span{
-	font-weight: 800;
+		color: #bbb;
+		padding-right: 10px;
+		width: 20px;
+}
+
+p .icon-user{
+	padding-left: 4px;
+}
+
+p .icon-map-marker{
+	padding-left: 5px;
+}
+
+
+.center{
+	margin-left: 13%;
+}
+
+.logout{
+	color: #777;
+	font-size: 14px;
+	padding-top:5px; 
+}
+
+.logout:hover{
+	cursor: pointer;
+	color: #08c;
 }

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require_tree .
 
 $(function(){
@@ -19,5 +20,19 @@ $(function(){
 	$(".menu li  a").click(function(){
 		$(".menu li a").removeClass('current');
 		$(this).addClass('current');
+	});
+
+	$('.logout').click(function(){
+			window.location.href="/";
+	});
+
+	$('.projects img').click(function(){
+		window.location.href="/pro/"+$(this).attr('id');
+	});
+
+	$('.project-img li img').click(function(){
+			$('.project-img li img').removeClass();
+			$(this).addClass('act');
+			$('.show-box img').attr('src',$(this).attr('src'));
 	});
 });
