@@ -2,38 +2,31 @@
 #project-header-wrap
   .inner
     a.my-logo href="/" Blaze For Your Best
-    h1 CMS6BEY
-    h2 这是一个根据在线分享的淘宝客.
+    h1 =@project.title
+    h2 =@project.description
 section.main
     .span2
     .inner.span8
       .l
         p.cover-section
-          img src='http://localhost:3000/img/projects/cms6bey.png'
+          img src=@attachments.first.img_path
         .project-description
-          p
-            =="这是一个开源的淘宝客,用户可以在这里分享自己喜欢的宝贝,可以收藏，@好友等等."
+          p =@project.detail
         .project-links
-          a.extrudedbtn href="http://bey6.herokuapp.com/" 
+          a.extrudedbtn href=@project.home_url 
             span Project Home
-          a.extrudedbtn href="https://github.com/mistbow/cms_6bey" 
+          a.extrudedbtn href=@project.github_url
             span View On Github
 
       .r
         .gallery
           .scroll-thumbs
             ul.thumbs.project-img
-              li
-                  img.act src="http://www.opensourcerails.com/screens/hackety/Screen%20Shot%202013-01-27%20at%209.35.21%20PM.png"
-              li
-                    img src="http://www.opensourcerails.com/screens/hackety/Screen%20Shot%202013-01-27%20at%209.35.50%20PM.png"
-              li
-                  img src="http://www.opensourcerails.com/screens/hackety/Screen%20Shot%202013-01-27%20at%209.36.35%20PM.png"
-
-              li
-                  img src="http://www.opensourcerails.com/screens/hackety/Screen%20Shot%202013-01-27%20at%209.36.58%20PM.png"
+              -@attachments.each_with_index do |attachment,index|
+                li
+                  img class=('act' if index==0) src=attachment.img_path
           .show-box
-            img src="http://www.opensourcerails.com/screens/hackety/Screen%20Shot%202013-01-27%20at%209.35.21%20PM.png"
+            img src=@attachments.first.img_path
 .clear
 .two_line
 .copyright
