@@ -5,7 +5,8 @@ Blaze::Application.routes.draw do
     root :to => 'projects#index'
     resources :projects
     resources :persons
+    resources :attachments
   end
+  
   root :to => 'home#index'
-
 end

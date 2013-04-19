@@ -1,0 +1,24 @@
+table.table.table-condensed.table-striped
+      thead
+      	tr
+	        th="用户名"
+	        th="邮箱"
+	        th="地址"
+	        th="擅长"
+	        th.operation="操作"
+      tbody
+
+      	-for person in @persons
+          tr
+					  td
+					    =person.name
+					  td
+					    =link_to person.email 
+					  td
+					    =link_to person.location 
+					  td
+					    =link_to person.power 
+					  td class="last links"
+					    ul class="inline"
+					      li=link_to raw('<i class="icon-pencil"></i>'),edit_admin_person_path(person),title:'修改'
+					      li=link_to raw('<i class="icon-remove"></i>'), admin_person_path(person), method: :delete, data: { confirm: 'Are you sure?' } , title: '删除'

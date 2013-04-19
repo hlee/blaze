@@ -19,10 +19,28 @@ html
           a.brand href="/" Blaze后台管理
           .nav-collapse
             ul.nav
-              li#projects.active 
-              		a href="#" 项目管理
-              li#persons 
-              		a href="#" 人员管理
+              li.dropdown class=('active' if controller_name=='projects')
+                  a.dropdown-toggle data-toggle="dropdown" href="#fat"  Porojects <b class='caret'></b>
+                  ul.dropdown-menu  
+                     li 
+                       a href="/admin" 项目列表
+                     li 
+                       a href="/admin/projects/new" 新增项目
+              li.dropdown  class=('active' if controller_name=='attachments' )
+                  a.dropdown-toggle data-toggle="dropdown" href="#fat" Attachments <b class='caret'></b>
+                  ul.dropdown-menu  
+                     li 
+                       a href="/admin/attachments" 图片列表
+                     li 
+                       a href="/admin/attachments/new" 新增图片
+
+              li.dropdown class=('active' if controller_name=='persons')
+              	  a.dropdown-toggle data-toggle="dropdown" href="#fat" Persons <b class='caret'></b>
+                  ul.dropdown-menu  
+                     li 
+                       a href="/admin/persons" 人员列表
+                     li 
+                       a href="/admin/persons/new" 新增人员
           p.pull-right.logout  退出
 .container
   .span8.admin-form

@@ -61,7 +61,7 @@
 			.members.center
 				-@persons.each_with_index do |person,index| 
 					.span5.person
-							img src="/img/person/miss.jpg"
+							=image_tag person.gravatar_url
 							.details
 								p 
 									span.icon-user.user
