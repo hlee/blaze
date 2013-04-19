@@ -1,0 +1,50 @@
+.admin-form{
+	margin-top:80px;
+	padding-left:7%;
+}
+
+.admin-form table{
+	width: 100%;
+	background-color: white;
+	display: block;
+	padding: 4px;
+	height: 500px;
+	position: relative;
+	text-overflow: ellipsis;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+	overflow: auto;
+}
+
+.admin-form table th{
+	width: 20%;
+}
+
+.form_new_edit{
+	width: 100%;
+	background-color: white;
+	display: block;
+	padding: 4px;
+	height: 500px;
+	position: relative;
+	text-overflow: ellipsis;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+	overflow: auto;
+}
+
+.form_new_edit .form-actions{
+	width: 20%;
+	margin-left: 15%;
+}
+
+.form-actions .btn-success{
+	margin-left:-100px;
+}
+
+.form-actions .btn-primary{
+	margin-left:40px;
+}
+
+
+

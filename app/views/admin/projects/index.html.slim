@@ -1,0 +1,12 @@
+table.table.table-condensed.table-striped
+      thead
+      	tr
+	        th.title="标题"
+	        th.description="简介"
+	        th.detail="详情"
+	        th.url=" 演示地址"
+	        th.operation="操作"
+      tbody
+
+      	-for project in @projects
+          =render partial: "projects", :locals=>{project:project}

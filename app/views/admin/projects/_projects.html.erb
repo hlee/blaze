@@ -1,0 +1,13 @@
+<tr>
+    <td><%=project.title%></td>
+    <td><%=project.description%></td>
+    <td><%=project.detail%></td>
+    <td><%=link_to project.home_url,project.home_url%></td>
+    <td class="last links">
+        <ul class="inline">
+           <%=link_to raw('<i class="icon-pencil"></i>'),edit_admin_project_path(project),title:'修改'%>
+           <%=link_to raw('<i class="icon-info-sign"></i>'),"",title:'查看'%>
+           <%= link_to raw('<i class="icon-remove"></i>'), "", method: :delete, data: { confirm: 'Are you sure?' } , title: '删除' %>
+        </ul>
+    </td>
+</tr>

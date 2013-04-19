@@ -1,11 +1,22 @@
-.navbar.navbar-fixed-top
+doctype html
+html
+  head
+    title Blaze
+    meta name="keywords" content="template language"
+    meta name="Blaze"
+    == stylesheet_link_tag    "application", :media => "all"
+    == javascript_include_tag "application"
+    == csrf_meta_tags 
+
+  body
+  .navbar.navbar-fixed-top
       .navbar-inner
         .container-fluid
           a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand href="#" Blaze后台管理
+          a.brand href="/" Blaze后台管理
           .nav-collapse
             ul.nav
               li#projects.active 
@@ -13,7 +24,6 @@
               li#persons 
               		a href="#" 人员管理
           p.pull-right.logout  退出
-
-
-
-         
+.container
+  .span8.admin-form
+		== yield   
