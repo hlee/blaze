@@ -1,0 +1,24 @@
+table.table.table-condensed.table-striped
+      thead
+      	tr
+	        th.title="标题"
+	        th.description="简介"
+	        th.detail="详情"
+	        th.url=" 演示地址"
+	        th.operation="操作"
+      tbody
+
+      	-for project in @projects
+          tr
+					  td
+					    =project.title
+					  td
+					    =project.description
+					  td
+					    =project.detail
+					  td
+					    =link_to project.home_url, project.home_url
+					  td class="last links"
+					    ul class="inline"
+					      li=link_to raw('<i class="icon-pencil"></i>'),edit_admin_project_path(project),title:'修改'
+					      li=link_to raw('<i class="icon-remove"></i>'), admin_project_path(project), method: :delete, data: { confirm: 'Are you sure?' } , title: '删除'

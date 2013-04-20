@@ -1,0 +1,24 @@
+.form_new_edit
+    .control-group
+      label.control-label 标题:
+      .controls
+          =f.text_field :title, class:'input-xlarge'
+    .control-group
+      label.control-label 简介:
+      .controls
+          =f.text_area :description, class:'input-xlarge', :rows=>"2" 
+    .control-group
+      label.control-label 详情:
+      .controls
+          =f.text_area :detail, class:'input-xlarge', :rows=>"3" 
+    .control-group
+      label.control-label home:
+      .controls
+          =f.text_field :home_url, class:'input-xlarge', :rows=>"3"   
+    .control-group
+      label.control-label github:
+      .controls
+          =f.text_field :github_url, class:'input-xlarge', :rows=>"3" 
+    .form-actions
+    	  = f.submit '提交', :class=>"btn btn-success"
+    	  =link_to  '取消', admin_root_path,:class=>"btn btn-primary"

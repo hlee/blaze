@@ -1,0 +1,12 @@
+.form_new_edit
+    .control-group
+      label.control-label  图片地址:
+      .controls
+          =f.text_field :img_path, class:'input-xlarge'
+    .control-group
+      label.control-label 所属项目:
+      .controls
+          =f.collection_select :project_id, Project.all, :id, :title
+    .form-actions
+    	  = f.submit '提交', :class=>"btn btn-success"
+    	  =link_to  '取消', admin_root_path,:class=>"btn btn-primary"

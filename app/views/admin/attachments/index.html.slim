@@ -1,0 +1,18 @@
+table.table.table-condensed.table-striped
+      thead
+      	tr
+	        th="缩略图"
+	        th="所属项目"
+	        th.operation="操作"
+      tbody
+
+      	-for attachment in @attachments
+          tr
+					  td
+					    =image_tag attachment.img_path
+					  td
+					    =link_to attachment.project.title, "/pro/#{attachment.project.id}" 
+					  td class="last links"
+					    ul class="inline"
+					      li=link_to raw('<i class="icon-pencil"></i>'),edit_admin_attachment_path(attachment),title:'修改'
+					      li=link_to raw('<i class="icon-remove"></i>'), admin_attachment_path(attachment), method: :delete, data: { confirm: 'Are you sure?' } , title: '删除'
